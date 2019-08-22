@@ -1,0 +1,12 @@
+#PBS -S /bin/bash
+#PBS -q batch
+#PBS -N bw
+#PBS -l nodes=1:ppn=20
+#PBS -l mem=10gb
+#PBS -l walltime=24:00:00
+
+
+
+ml deepTools/3.2.1-foss-2018a-Python-3.6.4
+
+plotCoverage -b Male_Liver_H3K9me3.bam Female_Liver_H3K9me3.bam --labels Male_H3K9me3 Female_H3K9me3 --plotFile coverageH3.png
